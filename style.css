@@ -328,4 +328,10 @@ background: #03a9f4;
     body {
         padding: 1cm;
     }
+    .skills-container {
+        page-break-inside: avoid;
+    }
 }
+
+
+
