@@ -297,3 +297,10 @@ background: #03a9f4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the values to control the shadow */
   text-decoration: underline;
 }
+
+@media print {
+    .skills {
+      page-break-before: always;
+    }
+  }
+  
