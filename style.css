@@ -304,3 +304,28 @@ background: #03a9f4;
     }
   }
   
+  @media print {
+    /* Prevent sections from breaking between pages */
+    .container {
+        break-inside: avoid; /* Ensures the entire container stays on one page */
+    }
+    .about, .skills, .interest {
+        break-inside: avoid; /* Prevent these sections from splitting */
+        page-break-inside: avoid; /* Compatibility with older browsers */
+    }
+
+    /* Ensure headings don't appear at the bottom of a page */
+    .title2 {
+        page-break-after: avoid; /* Prevents the heading from being orphaned */
+    }
+
+    /* Ensure individual boxes (skills, interests, etc.) don't split */
+    .skills .box, .interest ul li {
+        page-break-inside: avoid;
+    }
+
+    /* Optional: Add padding to printed pages for cleaner layout */
+    body {
+        padding: 1cm;
+    }
+}
